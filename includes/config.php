@@ -6,14 +6,15 @@
  * @var string or null
  */
 function config($key = '')
-{
+{ // This is a key value pair rested in an array
     $config = [
         'name' => 'Simple PHP Website',
         'pretty_uri' => false,
-        'site_url' => 'https://csuphpdemo.herokuapp.com',
+        'site_url' => 'https://php-demo-csu.herokuapp.com',
         'nav_menu' => [
-            '' => 'Home',
-            'about-us' => 'About Us'
+            'home' => 'Home',
+            'about-us' => 'About Us',
+            'contact' => 'Contact Me'
         ],
         'template_path' => 'template',
         'content_path' => 'content',
