@@ -13,8 +13,8 @@ function config($key = '')
         'site_url' => 'https://php-demo-csu.herokuapp.com',
         'nav_menu' => [
             'home' => 'Home',
-            'about-me' => 'About Me',
-            'contact' => 'Contact Me'
+            'about-me' => 'It&apos;s mee beeech',
+            'jenna' => 'Who is Jenna Marbles?'
         ],
         'template_path' => 'template',
         'content_path' => 'content',
