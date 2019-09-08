@@ -8,13 +8,13 @@
 function config($key = '')
 { // This is a key value pair rested in an array
     $config = [
-        'name' => 'Simple PHP Website',
+        'name' => 'A1: Welcome to Jenna&apos;s Ratchet Beauty Salon',
         'pretty_uri' => false,
         'site_url' => 'https://php-demo-csu.herokuapp.com',
         'nav_menu' => [
-            'home' => 'Home',
-            'about-me' => 'It&apos;s mee beeech',
-            'jenna' => 'Who is Jenna Marbles?'
+            'home' => 'This is home beech',
+            'about-me' => 'A lil&apos; &apos;bout mee beeech',
+            'jenna' => 'book Jenna'
         ],
         'template_path' => 'template',
         'content_path' => 'content',
