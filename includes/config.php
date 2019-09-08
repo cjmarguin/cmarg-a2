@@ -8,7 +8,7 @@
 function config($key = '')
 { // This is a key value pair rested in an array
     $config = [
-        'name' => 'A1: Welcome to Jenna&apos;s Ratchet Beauty Salon',
+        'name' => 'A1: Jenna&apos;s Ratchet Beauty Salon',
         'pretty_uri' => false,
         'site_url' => 'https://php-demo-csu.herokuapp.com',
         'nav_menu' => [
