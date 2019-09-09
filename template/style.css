@@ -18,6 +18,11 @@ article {
     text-align: left;
 }
 
+h2 {
+    font: Courier;
+
+}
+
 nav .item {
     text-decoration: none;
 }
