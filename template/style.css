@@ -1,5 +1,5 @@
 html {
-       background-color: #e6e6ff;
+       background-color: #c2feff;
        display: block;
 }
 
@@ -7,6 +7,7 @@ html {
 .wrap {
     max-width: 720px;
     margin: 50px auto;
+    background-color: #ffffff;
     padding: 30px 40px;
     text-align: center;
     box-shadow: 0 4px 25px -4px #9da5ab;
