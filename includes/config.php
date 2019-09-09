@@ -13,8 +13,8 @@ function config($key = '')
         'site_url' => 'https://php-demo-csu.herokuapp.com',
         'nav_menu' => [
             'home' => 'This is home beech',
-            'about-me' => 'A lil&apos; &apos;bout mee beeech',
-            'jenna' => 'book Jenna'
+            'about-me' => 'A lil &apos;bout mee beeech',
+            'jenna' => 'Book Jenna'
         ],
         'template_path' => 'template',
         'content_path' => 'content',
