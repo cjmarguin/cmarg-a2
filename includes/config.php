@@ -13,7 +13,7 @@ function config($key = '')
         'site_url' => 'https://cmarg-a1.herokuapp.com',
         'nav_menu' => [
             'comic' => 'Home',
-            'api' => 'Page 1',
+            'api' => 'Page 1'
 
         ],
         'template_path' => 'template',
