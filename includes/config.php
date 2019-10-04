@@ -12,9 +12,9 @@ function config($key = '')
         'pretty_uri' => false,
         'site_url' => 'https://cmarg-a1.herokuapp.com',
         'nav_menu' => [
-            'home' => 'This is home beech',
-            'about-me' => 'A lil &apos;bout mee beeech',
-            'jenna' => 'Book Jenna'
+            'comic' => 'Home',
+            'api' => 'Page 1',
+
         ],
         'template_path' => 'template',
         'content_path' => 'content',
