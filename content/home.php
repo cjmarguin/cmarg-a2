@@ -2,7 +2,7 @@
 
 <p>
 
- <img style="width:auto; height: auto;" src =<?php getCurComic(); ?>>
+ <img style="width:auto; height: auto;" src =<?php getComic(); ?>>
 
 
 </p>
