@@ -1,8 +1,6 @@
 <p> this is home/comic of the day </p>
 
-<p>
 
- <img style="width:auto; height: auto;" src =<?php getComic(); ?>>
+<div><?php getTitle(); ?> </div>
+ <img style="width:auto; height: auto;" src = <?php getComic(); ?>>
 
-
-</p>
