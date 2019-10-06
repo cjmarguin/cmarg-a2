@@ -12,8 +12,8 @@ function config($key = '')
         'pretty_uri' => false,
         'site_url' => 'https://cmarg-a2.herokuapp.com',
         'nav_menu' => [
-            'comic' => 'Home',
-            'api' => 'Page 1'
+            'comic' => 'Comic of the day',
+            'api' => 'Random Comic'
 
         ],
         'template_path' => 'template',

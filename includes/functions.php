@@ -73,11 +73,16 @@ function init()
     require config('template_path') . '/template.php';
 }
 
-//Gets the comic
-function getComic(){
+
+if (isset($_POST["random"])){
+    getRandComic();
+};
+
+//Gets the comic via url
+function getComic($url){
+
 $url = 'http://xkcd.com/614/info.0.json';
-/**dont change
-*/
+
 $handle = curl_init();
 curl_setopt($handle, CURLOPT_URL, $url);
 curl_setopt_array($handle,
@@ -89,13 +94,23 @@ CURLOPT_RETURNTRANSFER => true
 $output = curl_exec($handle);
 $response = json_decode($output, true);
 curl_close($handle);
-/*dont change
-*/
-
+echo '<h4>Title: ' . $response['title'] . '</h4><br>';
+    echo '<h4>Year: ' . $response['year'] . '</h4><br>';
+    echo '<img style="width:50%; height:50%;" src="' . $response['img'] . '" alt= "RIP. The comic broke homie. :(">';
 }
 
 
+function getCurComic(){
+    $url = 'https://xhcd.com/info.0.json';
+    getComic($url);
+}
 
+function getRanComic(){
+    $randNum = rand(1, 2207);
+    $url = "https://xkcd.com/" . $randNum . "/info.0.json";
+    getComic($url);
+}
+}
 
 
 ?>
