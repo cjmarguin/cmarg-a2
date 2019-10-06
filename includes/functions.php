@@ -6,10 +6,10 @@ if (isset($_POST["random"])){
 };
 
 
-//Gets the comic via url
+//Gets the comic via url for home
 function getComic($url){
 
-//$url = 'http://xkcd.com/614/info.0.json';
+$url = 'http://xkcd.com/info.0.json';
 
 $handle = curl_init();
 curl_setopt($handle, CURLOPT_URL, $url);
@@ -24,21 +24,77 @@ curl_setopt_array(
 $output = curl_exec($handle);
 $response = json_decode($output, true);
 curl_close($handle);
-echo '<h4>Title: ' . $response['title'] . '</h4><br>';
-    echo '<h4>Year: ' . $response['year'] . '</h4><br>';
-    echo '<img style="width:50%; height:suto;" src="' . $response['img'] . '" alt= "RIP. The comic broke homie. :(">';
-}
 
-
-function getCurComic(){
-    $url = 'https://xhcd.com/info.0.json';
-    getComic($url);
+echo $response['img'];
 }
 
 function getRandComic(){
     $randNum = rand(1, 2000);
-    $url = "https://xkcd.com/" . $randNum . "/info.0.json";
+    $url = "https://xkcd.com/" . rand(1,2280) . "/info.0.json";
     getComic($url);
+
+    $handle = curl_init();
+    curl_setopt($handle, CURLOPT_URL, $url);
+    curl_setopt_array($handle,
+    array(
+    CURLOPT_URL => $url,
+    CURLOPT_RETURNTRANSFER => true
+    )
+    );
+    $output = curl_exec($handle);
+    $response = json_decode($output, true);
+    curl_close($handle);
+
+    echo $response["img"]; //returns image
+}
+
+
+
+function getCurComic(){
+    $url = 'https://xhcd.com/' . rand (1, 2280). 'info.0.json';
+    echo $url;
+}
+
+function getTitle(){ // gets comic of the day info
+    $url = 'https://xkcd.com/info.0.json';
+
+    $handle = curl_init();
+    curl_setopt($handle, CURLOPT_URL, $url);
+    curl_setopt_array($handle,
+    array(
+    CURLOPT_URL => $url,
+    CURLOPT_RETURNTRANSFER => true
+    )
+    );
+    $output = curl_exec($handle);
+    $response = json_decode($output, true);
+    curl_close($handle);
+
+    echo '<h2>' . $response["title"] . '</h2>';
+    echo '<br>';
+    echo '<h3>' . $response["year"] . '</h3>';
+    echo '<br>';
+}
+
+function getRandTitle(){
+    $url = 'https://xkcd.com/'. rand(1,2280) .'/info.0.json';
+
+    $handle = curl_init();
+    curl_setopt($handle, CURLOPT_URL, $url);
+    curl_setopt_array($handle,
+    array(
+    CURLOPT_URL => $url,
+    CURLOPT_RETURNTRANSFER => true
+    )
+    );
+    $output = curl_exec($handle);
+    $response = json_decode($output, true);
+    curl_close($handle);
+
+    echo '<h2>' . $response["title"] . '</h2>';
+    echo '<br>';
+    echo '<h3>' . $response["year"] . '</h3>';
+    echo '<br>';
 }
 
 /**
