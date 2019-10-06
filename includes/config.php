@@ -5,8 +5,8 @@
  *
  * @var string or null
  */
-function config($key = '')
-{ // This is a key value pair rested in an array
+function config($key = ''){
+// This is a key value pair rested in an array
     $config = [
         'name' => 'A2: Yeet',
         'pretty_uri' => false,

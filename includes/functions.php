@@ -81,16 +81,18 @@ if (isset($_POST["random"])){
 //Gets the comic via url
 function getComic($url){
 
-$url = 'http://xkcd.com/614/info.0.json';
+//$url = 'http://xkcd.com/614/info.0.json';
 
 $handle = curl_init();
 curl_setopt($handle, CURLOPT_URL, $url);
-curl_setopt_array($handle,
-array(
-CURLOPT_URL => $url,
-CURLOPT_RETURNTRANSFER => true
-)
+curl_setopt_array(
+    $handle,
+    array(
+        CURLOPT_URL => $url,
+        CURLOPT_RETURNTRANSFER => true
+    )
 );
+
 $output = curl_exec($handle);
 $response = json_decode($output, true);
 curl_close($handle);
