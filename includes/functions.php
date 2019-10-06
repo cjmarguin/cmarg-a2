@@ -27,7 +27,7 @@ function site_version()
 /**
  * Website navigation.
  */
-function nav_menu($sep = ' ★ ')
+function nav_menu($sep = ' ')
 {
     $nav_menu = '';
     $nav_items = config('nav_menu');
