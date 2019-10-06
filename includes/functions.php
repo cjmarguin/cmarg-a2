@@ -110,7 +110,7 @@ function getRanComic(){
     $url = "https://xkcd.com/" . $randNum . "/info.0.json";
     getComic($url);
 }
-}
+
 
 
 ?>
