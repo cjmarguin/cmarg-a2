@@ -1,3 +1,8 @@
 <p> this is home/comic of the day </p>
 
-<p><?php getCurrentComic(); ?></div></p>
+<p>
+
+ <img style="width:auto; height: auto;" src =<?php getCurComic(); ?>>
+
+
+</p>
