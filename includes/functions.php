@@ -107,7 +107,7 @@ function getCurComic(){
     getComic($url);
 }
 
-function getRanComic(){
+function getRandComic(){
     $randNum = rand(1, 2207);
     $url = "https://xkcd.com/" . $randNum . "/info.0.json";
     getComic($url);
