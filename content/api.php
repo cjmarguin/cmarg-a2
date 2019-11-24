@@ -1,3 +1,25 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <script>
            $(document).ready(function(){
   $("button").click(function(){
@@ -19,11 +41,11 @@
            });
         </script>
 <div style="margin-right: 0px; margin-left: 0px; text-align: center;">
-<button  id="change"  >New Comic</button>
+<button  id="change">New Comic</button>
 <div class="d-flex justify-content-center">
 <br>
 <div id="randomComic">
-<div> <?php getRand(); ?> </div>
+<div> <?php getRandCom(); ?> </div>
 </div>
 </div>
 </div>

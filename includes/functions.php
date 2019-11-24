@@ -28,12 +28,16 @@ curl_close($handle);
 echo $response['img'];
 }
 
-function getRandComic(){
-    $randNum = rand(1, 2000);
-    $url = "https://xkcd.com/" . rand(1,2280) . "/info.0.json";
-    getComic($url);
+function getRandom(){
+    $randNumber = rand(0,2208);
+    echo $randNumber;
+}
 
+function getRandCom(){
+   
+    $url = "https://xkcd.com/" .$random. "/info.0.json";
     $handle = curl_init();
+
     curl_setopt($handle, CURLOPT_URL, $url);
     curl_setopt_array($handle,
     array(
@@ -45,56 +49,55 @@ function getRandComic(){
     $response = json_decode($output, true);
     curl_close($handle);
 
-    echo $response["img"]; //returns image
+    echo $response['title'].'<br>';
+    echo $response['year'].'<br>';
+    echo '<img stc=" '.$response["img"].' alt="random">'; //returns image
 }
 
-
-
-function getCurComic(){
-    $url = 'https://xhcd.com/' . rand (1, 2280). 'info.0.json';
-    echo $url;
+function getNav(){
+  global $nav_items, $urls;
+  $navbar = '<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <!-- Image and text -->
+    <nav class="navbar navbar-light bg-light">
+      <a class="navbar-brand" href="#">
+        <img src="/dumpster.png" width="30" height="30" class="d-inline-block align-top" alt="">
+        Git Gud
+      </a>
+    </nav>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">';
+  echo $navbar;
+  for ($x = 0; $x < sizeof($nav_items) ; $x++) {
+    $nav_bar_menu .= '<li class="nav-item"><a class="nav-link" href= /' . $urls[$x] . '>'. $nav_items[$x] .'</a></li>';
+  }
+  echo $nav_bar_menu;
+  $closeNavBar = '</ul>
+      </div>
+    </nav>';
+  echo $closeNavBar;
 }
 
-function getTitle(){ // gets comic of the day info
-    $url = 'https://xkcd.com/info.0.json';
-
+function getCurCom(){
+    $url = 'https://xhcd.com/info.0.json';
     $handle = curl_init();
     curl_setopt($handle, CURLOPT_URL, $url);
     curl_setopt_array($handle,
     array(
-    CURLOPT_URL => $url,
-    CURLOPT_RETURNTRANSFER => true
-    )
+        CURLOPT_URL => $url,
+        CURLOPT_RETURNTRANSFER => true)
+        
     );
     $output = curl_exec($handle);
     $response = json_decode($output, true);
     curl_close($handle);
 
-    echo '<h2>' . $response["title"] . '</h2>';
-    echo '<br>';
-    echo '<h3>' . $response["year"] . '</h3>';
-    echo '<br>';
-}
+    echo $response['title'].'<br>';
+    echo $response['year'].'<br>'; 
+    echo '<img src=" '.$response['img'].' " alt="test">';
 
-function getRandTitle(){
-    $url = 'https://xkcd.com/'. rand(1,2280) .'/info.0.json';
-
-    $handle = curl_init();
-    curl_setopt($handle, CURLOPT_URL, $url);
-    curl_setopt_array($handle,
-    array(
-    CURLOPT_URL => $url,
-    CURLOPT_RETURNTRANSFER => true
-    )
-    );
-    $output = curl_exec($handle);
-    $response = json_decode($output, true);
-    curl_close($handle);
-
-    echo '<h2>' . $response["title"] . '</h2>';
-    echo '<br>';
-    echo '<h3>' . $response["year"] . '</h3>';
-    echo '<br>';
 }
 
 // Displays site name.
