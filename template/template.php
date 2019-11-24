@@ -27,7 +27,7 @@
     </ul>
   </div>
 </nav>
-<div class="jumbotron"> <h1>Comics!</h1> </div>
+<div class="jumbotron"> <h1>Assignment 2: Comic API Generator</h1> </div>
 <?php page_content();?>
 
     <!-- Optional JavaScript -->

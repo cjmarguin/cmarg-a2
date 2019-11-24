@@ -23,7 +23,7 @@
 <div class="d-flex justify-content-center">
 <br>
 <div id="randomComic">
-<div> <?php getComicRand(); ?> </div>
+<div> <?php getRand(); ?> </div>
 </div>
 </div>
 </div>

@@ -1,6 +1,6 @@
 <?php
-/**Function for getting the comic title and date for random comic for random comic */
-function getComicRand(){
+/**Function pulls comic title & date for rand comic  */
+function getRand(){
 $randNum = rand(1,2208);
 $url = 'https://xkcd.com/'. $randNum. '/'.'info.0.json';
 /**dont change
@@ -25,6 +25,6 @@ echo '<div class="d-flex justify-content-center"> <img src = ' . $response["img"
 }
 $random = true ;
 if(isset($random)){
-    getComicRand();
+    getRand();
 }
 ?>

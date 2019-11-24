@@ -97,17 +97,15 @@ function getRandTitle(){
     echo '<br>';
 }
 
-/**
- * Displays site name.
- */
+// Displays site name.
+
 function site_name()
 {
     echo config('name');
 }
 
-/**
- * Displays site url provided in conig.
- */
+// Displays url provided in conig.
+ 
 function site_url()
 {
     echo config('site_url');
