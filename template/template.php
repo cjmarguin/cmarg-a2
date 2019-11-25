@@ -33,8 +33,7 @@
         <article class="mx-auto">
             <?php page_content(); ?>
         </article>
-    </body>
-
+    
 <footer class="container text-center">
     <br>
     <small>&copy;<?php echo date('Y'); ?> <?php site_name(); ?>.<br><?php site_version(); ?></small>
@@ -50,6 +49,7 @@
 
     
 
+</body>
 
 
 
