@@ -10,7 +10,7 @@
 </head>
 
 <body style="padding-bottom: 75px;">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+    <nav class="navbar navbar-light" style="background-color: #e3f2fd;"> <!-- make a style for navbar -->
       <a class="navbar-toggler navbar-brand" href="https://cmarg-a2.herokuapp.com/"><i class="fa fa-2x fa-home"></i></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
