@@ -30,6 +30,11 @@
             
         </header>
 
+        <article class="mx-auto">
+            <?php page_content(); ?>
+        </article>
+    </body>
+
 <footer class="container text-center">
     <br>
     <small>&copy;<?php echo date('Y'); ?> <?php site_name(); ?>.<br><?php site_version(); ?></small>
@@ -42,12 +47,11 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
-    
-</body>
 
-<article class="mx-auto">
-    <?php page_content(); ?>
-</article>
+    
+
+
+
 
 <script>
         $("#button").click(function() {
