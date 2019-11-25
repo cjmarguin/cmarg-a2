@@ -67,6 +67,19 @@ function page_title()
     echo ucwords(str_replace('-', ' ', $page));
 }
 
+//website navbar
+
+function nav_menu(){
+    $nav_menu = ' ';
+    $nav_items = config('nav_menu');
+    foreach ($nav_items as $uri => $name){
+        $class = str_replace('page=', '', $_SERVER['QUERY_STRING']) == $uri ? 'active' : ' ';
+        $uri = config ('site_url') . '/' . (config('pretty_uri') || $uri == '' ? '' : '?page=') . $uri;
+        $nav_menu .= '<li class="nav-item ' .$class .'"> <a href="' . $url . '" title="' . $name . '" class=" nav-link ' . '">' . $name . '</a>' . '</li>';
+    }
+    echo trim($nav_menu);
+}
+
 /**
  * Displays page content. It takes the data from
  * the static pages inside the pages/ directory.
