@@ -27,12 +27,11 @@
             </div>
 
 
-            <article class="mx-auto">
-                <?php page_content(); ?>
-            </article>
+            
         </header>
 
 <footer class="container text-center">
+    <br>
     <small>&copy;<?php echo date('Y'); ?> <?php site_name(); ?>.<br><?php site_version(); ?></small>
 </footer>
 
@@ -45,6 +44,11 @@
 
     
 </body>
+
+<article class="mx-auto">
+    <?php page_content(); ?>
+</article>
+
 <script>
         $("#button").click(function() {
             $.ajax({
@@ -58,7 +62,7 @@
                     $("#randomPic").html(result);
                 },
                 error: function() {
-                    alert("Failed to get a new comic");
+                    alert("Sorry bro, looks like it couldnt couldn't load the pic");
                 }
             });
             return false;
