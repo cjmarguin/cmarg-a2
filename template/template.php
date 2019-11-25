@@ -33,5 +33,28 @@
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 
+
+
+<!-- Button functionality -->
+<script>
+        $("#button").click(function() {
+            $.ajax({
+                type: 'post',
+                url: '../includes/functions.php',
+                data: {
+                    "random": true
+                },
+                dataType: "HTML",
+                success: function(result) {
+                    $("#randomPic").html(result);
+                },
+                error: function() {
+                    alert("Failed to get a new comic");
+                }
+            });
+            return false;
+        });
+    </script>
+
   </body>
 </html>
