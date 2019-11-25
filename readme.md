@@ -11,4 +11,4 @@
 
 Website:
 
-cmarg-a2.herokuapp.com
+http://cmarg-a2.herokuapp.com/
