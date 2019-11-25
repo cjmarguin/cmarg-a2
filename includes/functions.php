@@ -20,9 +20,9 @@ function getComic($url){
     $output = curl_exec($handle);
     $response = json_decode($output, true);
     curl_close($handle);
-    echo $response['title'];
-    echo $response ['year'];
-    echo '<img stc="' . $response['img']. '" alt= "Sorry broski, the picture broke">';
+    echo '<h3> ' . $response['title'] . '</h3><br>' ;
+    echo '<h3>' . $response ['year'] . '</h3><br>';
+    echo '<img src="' . $response['img']. '" alt= "Sorry broski, the picture broke">';
 }
 
 // Summons Random comic
