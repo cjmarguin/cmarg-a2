@@ -1,21 +1,18 @@
 <?php
 
 
+
 if (isset($_POST["random"])){
-    getRandComic();
+    getRandCom();
 };
 
 
 //Gets the comic via url for home
 function getComic($url){
-
-$url = 'http://xkcd.com/info.0.json';
-
-$handle = curl_init();
-curl_setopt($handle, CURLOPT_URL, $url);
-curl_setopt_array(
-    $handle,
-    array(
+   
+    $handle = curl_init();
+    curl_setopt($handle, CURLOPT_URL, $url);
+    curl_setopt_array($handle,array(
         CURLOPT_URL => $url,
         CURLOPT_RETURNTRANSFER => true
     )
@@ -24,86 +21,27 @@ curl_setopt_array(
 $output = curl_exec($handle);
 $response = json_decode($output, true);
 curl_close($handle);
-
-echo $response['img'];
+echo $response['title'];
+echo $response ['year'];
+echo '<img stc="' . $response['img']. '" alt= "Sorry broski, the picture broke">';
 }
 
-function getRandom(){
-    $randNumber = rand(0,2208);
-    echo $randNumber;
-}
-
+// Summons Random comic
 function getRandCom(){
-   
-    $url = "https://xkcd.com/" .$random. "/info.0.json";
-    $handle = curl_init();
-
-    curl_setopt($handle, CURLOPT_URL, $url);
-    curl_setopt_array($handle,
-    array(
-    CURLOPT_URL => $url,
-    CURLOPT_RETURNTRANSFER => true
-    )
-    );
-    $output = curl_exec($handle);
-    $response = json_decode($output, true);
-    curl_close($handle);
-
-    echo $response['title'].'<br>';
-    echo $response['year'].'<br>';
-    echo '<img stc=" '.$response["img"].' alt="random">'; //returns image
+    $randNumber = rand(1,2208);
+    $url = "https://xkcd.com/" . $randNum . "/info.0.json";
+    getComic($url);
 }
 
-function getNav(){
-  global $nav_items, $urls;
-  $navbar = '<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <!-- Image and text -->
-    <nav class="navbar navbar-light bg-light">
-      <a class="navbar-brand" href="#">
-        <img src="/dumpster.png" width="30" height="30" class="d-inline-block align-top" alt="">
-        Git Gud
-      </a>
-    </nav>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav">';
-  echo $navbar;
-  for ($x = 0; $x < sizeof($nav_items) ; $x++) {
-    $nav_bar_menu .= '<li class="nav-item"><a class="nav-link" href= /' . $urls[$x] . '>'. $nav_items[$x] .'</a></li>';
-  }
-  echo $nav_bar_menu;
-  $closeNavBar = '</ul>
-      </div>
-    </nav>';
-  echo $closeNavBar;
+// Summons Daily comic
+function getDayCom(){
+    $url = 'https://xkcd.com/info.0.json';
+    getComic($url);
 }
 
-function getCurCom(){
-    $url = 'https://xhcd.com/info.0.json';
-    $handle = curl_init();
-    curl_setopt($handle, CURLOPT_URL, $url);
-    curl_setopt_array($handle,
-    array(
-        CURLOPT_URL => $url,
-        CURLOPT_RETURNTRANSFER => true)
-        
-    );
-    $output = curl_exec($handle);
-    $response = json_decode($output, true);
-    curl_close($handle);
+// Displays site name
 
-    echo $response['title'].'<br>';
-    echo $response['year'].'<br>'; 
-    echo '<img src=" '.$response['img'].' " alt="test">';
-
-}
-
-// Displays site name.
-
-function site_name()
-{
+function site_name(){
     echo config('name');
 }
 

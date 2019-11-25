@@ -8,7 +8,7 @@
 function config($key = ''){
 // This is a key value pair rested in an array
     $config = [
-        'name' => 'A2: Yeet',
+        'name' => 'A2: Comic API',
         'pretty_uri' => false,
         'site_url' => 'https://cmarg-a2.herokuapp.com',
         'nav_menu' => [
