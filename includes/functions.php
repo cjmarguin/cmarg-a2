@@ -125,17 +125,9 @@ function site_version()
 /**
  * Website navigation.
  */
-function nav_menu($sep = ' ★ ')
-{
-    $nav_menu = '';
-    $nav_items = config('nav_menu');
-    foreach ($nav_items as $uri => $name) {
-        $class = str_replace('page=', '', $_SERVER['QUERY_STRING']) == $uri ? ' active' : '';
-        $url = config('site_url') . '/' . (config('pretty_uri') || $uri == '' ? '' : '?page=') . $uri;
-        $nav_menu .= '<a href="' . $url . '" title="' . $name . '" class="item ' . $class . '">' . $name . '</a>' . $sep;
-    }
-    echo trim($nav_menu, $sep);
-}
+function config = [
+
+]
 
 /**
  * Displays page title. It takes the data from
