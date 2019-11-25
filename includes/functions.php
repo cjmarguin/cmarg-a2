@@ -6,7 +6,6 @@ if (isset($_POST["random"])){
     getRandCom();
 };
 
-
 //Gets the comic via url for home
 function getComic($url){
    
@@ -74,7 +73,7 @@ function nav_menu(){
     $nav_items = config('nav_menu');
     foreach ($nav_items as $uri => $name){
         $class = str_replace('page=', '', $_SERVER['QUERY_STRING']) == $uri ? 'active' : ' ';
-        $uri = config ('site_url') . '/' . (config('pretty_uri') || $uri == '' ? '' : '?page=') . $uri;
+        $url = config ('site_url') . '/' . (config('pretty_uri') || $uri == '' ? '' : '?page=') . $uri;
         $nav_menu .= '<li class="nav-item ' . $class .'"> <a href="' . $url . '" title="' . $name . '" class="nav-link ' . '">' . $name . '</a>' . '</li>';
     }
     echo trim($nav_menu);
@@ -102,4 +101,3 @@ function init()
 {
     require config('template_path') . '/template.php';
 }
-
