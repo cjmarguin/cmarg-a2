@@ -60,18 +60,7 @@ function site_version()
     echo config('version');
 }
 
-/**
- * Website navigation.
- */
-function config = [
-
-]
-
-/**
- * Displays page title. It takes the data from
- * URL, it replaces the hyphens with spaces and
- * it capitalizes the words.
- */
+// gets page title
 function page_title()
 {
     $page = isset($_GET['page']) ? htmlspecialchars($_GET['page']) : 'Home';
