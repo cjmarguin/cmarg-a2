@@ -16,14 +16,14 @@ function getComic($url){
         CURLOPT_URL => $url,
         CURLOPT_RETURNTRANSFER => true
     )
-);
+    );
 
-$output = curl_exec($handle);
-$response = json_decode($output, true);
-curl_close($handle);
-echo $response['title'];
-echo $response ['year'];
-echo '<img stc="' . $response['img']. '" alt= "Sorry broski, the picture broke">';
+    $output = curl_exec($handle);
+    $response = json_decode($output, true);
+    curl_close($handle);
+    echo $response['title'];
+    echo $response ['year'];
+    echo '<img stc="' . $response['img']. '" alt= "Sorry broski, the picture broke">';
 }
 
 // Summons Random comic
