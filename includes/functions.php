@@ -20,8 +20,8 @@ function getComic($url){
     $output = curl_exec($handle);
     $response = json_decode($output, true);
     curl_close($handle);
-    echo '<h3> ' . $response['title'] . '</h3><br>' ;
-    echo '<h2>' . $response ['year'] . '</h2><br>';
+    echo '<h2> ' . $response['title'] . '</h2><br>' ;
+    echo '<h4>Year: '. $response ['year'] . '</h4><br>';
     echo '<img src="' . $response['img']. '" alt= "Sorry broski, the picture broke">';
 }
 
@@ -34,7 +34,7 @@ function getRandCom(){
 
 // Summons Daily comic
 function getDCom(){
-    $url = "https://xkcd.com/" . "info.0.json";
+    $url = "https://xkcd.com/info.0.json";
     getComic($url);
 }
 
