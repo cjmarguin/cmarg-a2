@@ -26,13 +26,11 @@
                 <h1><?php site_name(); ?></h1>
             </div>
 
-
-            
-        </header>
-
         <article class="mx-auto">
             <?php page_content(); ?>
         </article>
+
+        </header>
     
 <footer class="container text-center">
     <br>
@@ -49,7 +47,7 @@
 
     
 
-</body>
+
 
 
 
@@ -72,4 +70,6 @@
             return false;
         });
     </script>
+
+    </body>
 </html>
