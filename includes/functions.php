@@ -34,7 +34,7 @@ function getRandCom(){
 
 // Summons Daily comic
 function getDCom(){
-    $url = 'https://xkcd.com/info.0.json';
+    $url = "https://xkcd.com/" . "info.0.json";
     getComic($url);
 }
 
