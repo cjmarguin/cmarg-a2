@@ -27,7 +27,7 @@ function getComic($url){
 
 // Summons Random comic
 function getRandCom(){
-    $randNumber = rand(1,2208);
+    $randNumb = rand(1,2208);
     $url = "https://xkcd.com/" . $randNum . "/info.0.json";
     getComic($url);
 }
