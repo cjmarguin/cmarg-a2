@@ -1,1 +1,1 @@
-<?php getDayCom(); ?>
+<?php getDCom(); ?>

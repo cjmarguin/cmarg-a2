@@ -9,7 +9,7 @@
     <title><?php page_title(); ?> | <?php site_name(); ?></title>
 </head>
 
-<body style="padding-bottom: 75px;">
+<body style="padding-bottom: 75px;"> <!-- make a style -->
     <nav class="navbar navbar-light" style="background-color: #e3f2fd;"> <!-- make a style for navbar -->
       
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
