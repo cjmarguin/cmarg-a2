@@ -1,1 +1,1 @@
-<div id="randomPic"><?php getDCom(); ?></div>
+<?php getDCom();
