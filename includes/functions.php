@@ -4,8 +4,6 @@
 
 if (isset($_POST["random"])){
     getRandCom();
-}else{
-    getDCom();
 };
 
 //Gets the comic via url for home
