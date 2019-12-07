@@ -7,6 +7,15 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="template/style.css">
     <title><?php page_title(); ?> | <?php site_name(); ?></title>
+
+<header class="container text-center", >
+     <div class="jumbotron jumbotron-fluid">
+     <h1><?php site_name(); ?></h1>
+     </div>
+
+</header>            
+
+
 </head>
 
 <body style="padding-bottom: 75px;"> <!-- make a style -->
@@ -17,20 +26,17 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
-         <?php nav_menu(); ?>
+        <?php nav_menu(); ?>
       </div>
       </nav>
 
-        <header class="container text-center", >
-            <div class="jumbotron jumbotron-fluid">
-                <h1><?php site_name(); ?></h1>
-            </div>
+        
 
         <article class="mx-auto">
             <?php page_content(); ?>
         </article>
 
-        </header>
+      
     
 
 
