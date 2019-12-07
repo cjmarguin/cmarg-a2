@@ -12,7 +12,7 @@ function config($key = ''){
         'pretty_uri' => false,
         'site_url' => 'https://cmarg-a2.herokuapp.com',
         'nav_menu' => [
-            'home' => 'Comic of the day',
+            'home' => 'Home',
             'api' => 'Random Comic'
 
         ],
