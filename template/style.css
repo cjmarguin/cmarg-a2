@@ -71,3 +71,7 @@ footer {
     font-family: "Courier New", Courier, monospace;
    
 }
+
+button {
+    text-align: center;
+}
