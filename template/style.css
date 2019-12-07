@@ -19,17 +19,12 @@ article {
     text-align: left;
 }
 
-h1 {
+h1,h2,h4 {
     font-family: "Courier New", Courier;
     text-align: center;
 }
 
-h2 {
-    font-family: "Courier New";
-    text-align: center;
 
-}
-}
 nav .item {
     text-decoration: none;
 }
