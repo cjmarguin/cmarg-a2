@@ -32,10 +32,7 @@
 
         </header>
     
-<footer class="container text-center">
-    <br>
-    <small>&copy;<?php echo date('Y'); ?> <?php site_name(); ?>.<br><?php site_version(); ?></small>
-</footer>
+
 
     <nav class="navbar fixed-bottom navbar-dark bg-primary"> </nav>
 
