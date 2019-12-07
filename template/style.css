@@ -57,6 +57,7 @@ nav.navbar.navbar-light{
     background-color: #e6faff;
     border-color: #e6faff;
     color: black;
+    align-content: center;
 }
 
 .jumbotron.jumbostron-fluid {
