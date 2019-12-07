@@ -24,6 +24,10 @@ h1,h2,h4 {
     text-align: center;
 }
 
+h1{
+    font-weight: bold;
+    color: #0B81A5;
+}
 
 nav .item {
     text-decoration: none;
@@ -48,7 +52,7 @@ nav.navbar.navbar-light{
     font-weight: bold;
 }
 
-#my-button.btn.btn-primary.btn-lg.btn-block{
+#button.btn.btn-outline-primary{
     font-family: "Courier New", Courier, monospace;
     background-color: #e6faff;
     border-color: #e6faff;
@@ -56,7 +60,7 @@ nav.navbar.navbar-light{
 }
 
 .jumbotron.jumbostron-fluid {
-    color: #0B81A5;
+
     font-family: "Courier New", Courier, monospace;
     font-weight: bold;
 }
