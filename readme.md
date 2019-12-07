@@ -1,14 +1,3 @@
-# Assignement 2 Website #
+# Assignement 2 Website 
 
-
-## Usage
-
-
-## Concepts
-
-## Lisence
-
-
-Website:
-
-http://cmarg-a2.herokuapp.com/
+Website: http://cmarg-a2.herokuapp.com/

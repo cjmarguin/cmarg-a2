@@ -1,5 +1,4 @@
 html {
-       background-color: #c2feff;
        display: block;
        font-family: "Courier New";
 }
@@ -57,7 +56,7 @@ nav.navbar.navbar-light{
     background-color: #e6faff;
     border-color: #e6faff;
     color: black;
-    align-content: center;
+    text-align: center;
 }
 
 .jumbotron.jumbostron-fluid {
