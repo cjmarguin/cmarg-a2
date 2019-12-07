@@ -72,4 +72,11 @@
     </script>
 
     </body>
+    
+    <footer>
+    
+        CJ Marguin &copy; 2019
+    <br>
+    </footer>
+
 </html>
