@@ -56,6 +56,7 @@ nav.navbar.navbar-light{
     background-color: #e6faff;
     border-color: #e6faff;
     color: black;
+    display: block;
     text-align: center;
 }
 
@@ -74,4 +75,5 @@ footer {
 
 .button {
     text-align: center;
+    display: block;
 }
