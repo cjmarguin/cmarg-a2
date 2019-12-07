@@ -29,13 +29,6 @@ h2 {
     text-align: center;
 
 }
-
-nav {
-    font-family: "Courier New";
-    font-weight: 100;
-    font-size: 15px;
-    font-weight: bold;
-
 }
 nav .item {
     text-decoration: none;
@@ -52,12 +45,7 @@ img {
     box-shadow: 0 4px 25px -4px #9da5ab
 }
 
-footer {
-    text-align: center;
-    background-color: #e3f2fd;
-    font-family: "Courier New", Courier, monospace;
-   
-}
+
 
 nav.navbar.navbar-light{
     background-color: #e3f2fd;
@@ -72,8 +60,15 @@ nav.navbar.navbar-light{
     color: black;
 }
 
-.jumbotron.text-center {
+.jumbotron.jumbostron-fluid {
     color: #0B81A5;
     font-family: "Courier New", Courier, monospace;
     font-weight: bold;
+}
+
+footer {
+    text-align: center;
+    background-color: #e3f2fd;
+    font-family: "Courier New", Courier, monospace;
+   
 }
